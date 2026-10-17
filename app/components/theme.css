@@ -1,0 +1,42 @@
+/*
+  SITE COLORS: edit values here and every component updates.
+  Import once in your root file:  import "./theme.css";
+*/
+:root {
+  /* Brand */
+  --color-brand: #0e007c;
+  --color-brand-hover: #2a1fa8;
+  --color-on-brand: #ffffff;
+
+  /* Surfaces */
+  --color-surface: #ffffff;        /* modal, navbar, chips */
+  --color-surface-muted: #f8fafc;  /* cards */
+  --color-surface-hover: #f1f5f9;
+  
+
+  /* Section panels: colored title bar, light body */
+  --color-section-bg: var(--color-brand);           /* title bar */
+  --color-section-title: #ffffff;                   /* title text on the bar */
+  --color-section-body-bg: var(--color-surface);    /* body behind the content */
+  --color-section-text: var(--color-text-muted);    /* body text and links */
+
+  /* Home page Intro (the intro that fades out on scroll) */
+  --color-accent: #0cbffa;
+  --color-hero-text: #ffffff;
+  --color-hero-fade: rgb(2 6 23 / 0.8);  /* gradient at the bottom of the portrait */
+
+  /* Lines and text */
+  --color-border: #e2e8f0;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-text-subtle: #94a3b8;
+
+  /* Animated background (canvas) */
+  --color-bg-base: var(--color-brand);
+  --color-bg-dots: #002b90;
+
+  /* Media / overlays */
+  --color-media-bg: #020617;
+  --color-overlay: rgb(15 23 42 / 0.8);
+  --color-backdrop: rgb(15 23 42 / 0.4);
+}

@@ -33,6 +33,11 @@ export const t = {
   overlay: "bg-[color:var(--color-overlay)]",
   backdrop: "bg-[color:var(--color-backdrop)]",
 
+  // Skeleton loaders
+  skeleton: "bg-[color:var(--color-skeleton)]",
+  skeletonDark: "bg-[color:var(--color-skeleton-dark)]",
+  skeletonOnBrand: "bg-[color:var(--color-skeleton-on-brand)]",
+  
   // Borders
   border: "border-[color:var(--color-border)]",
 

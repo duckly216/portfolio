@@ -31,6 +31,11 @@
   --color-text-muted: #475569;
   --color-text-subtle: #94a3b8;
 
+  /* Skeleton loaders (pulsing placeholders) */
+  --color-skeleton: #e2e8f0;                   /* on light surfaces (cards, section body) */
+  --color-skeleton-dark: #334155;              /* on media / image backdrops */
+  --color-skeleton-on-brand: rgb(255 255 255 / 0.15); /* on the brand-colored title bar */
+
   /* Animated background (canvas) */
   --color-bg-base: var(--color-brand);
   --color-bg-dots: #002b90;

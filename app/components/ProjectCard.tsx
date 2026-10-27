@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { ImageWithSkeleton } from "./Skeleton";
 import { t } from "./theme";
 
 type ProjectCardProps = {
@@ -58,15 +59,13 @@ export function ProjectCard({
       >
         <div>
           {thumbnail ? (
-            <div
-              className={`mb-4 aspect-video w-full overflow-hidden rounded-lg border ${t.border} ${t.mediaBg}`}
-            >
-              <img
-                src={thumbnail}
-                alt={`${title} thumbnail`}
-                className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
+            <ImageWithSkeleton
+              src={thumbnail}
+              alt={`${title} thumbnail`}
+              tone="dark"
+              wrapperClassName={`mb-4 aspect-video w-full overflow-hidden rounded-lg border ${t.border} ${t.mediaBg}`}
+              className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+            />
           ) : null}
 
           <h3 className={`text-lg font-semibold ${t.text}`}>{title}</h3>
@@ -178,9 +177,13 @@ export function ProjectCard({
                   <div
                     className={`relative overflow-hidden rounded-xl border ${t.border} ${t.mediaBg}`}
                   >
-                    <img
+                    {/* key resets the skeleton on every slide change */}
+                    <ImageWithSkeleton
+                      key={exampleImages[currentImageIndex]}
                       src={exampleImages[currentImageIndex]}
                       alt={`${title} preview ${currentImageIndex + 1}`}
+                      tone="dark"
+                      loadingClassName="aspect-video w-full"
                       className="max-h-[60vh] w-auto max-w-full object-contain"
                     />
 
